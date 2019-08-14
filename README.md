@@ -11,6 +11,8 @@
 
 ## delete user
 
+```javascript
 {
     "id": 7
 }
+```
