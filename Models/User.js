@@ -22,3 +22,20 @@ const User = sequelize.define("user", {
 
 
 module.exports = User
+
+/*
+json 
+
+{
+    "name": "prueba",
+    "email": "prueba@gmail.com"
+}
+
+! para eliminar
+
+{
+    "id": 7
+}
+
+*/
+
