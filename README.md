@@ -1,11 +1,11 @@
 # Tools used
 
-__node v10.16.0__
-__npm v6.9.0__
-__mysql v8.0.17__
+- __node v10.16.0__
+- __npm v6.9.0__
+- __mysql v8.0.17__
 
 
-# Json example
+# Request examples
 
 ## get users
 
