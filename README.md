@@ -18,6 +18,14 @@ modify the .env file, to change the environment variables.
 - DB_HOST
 - DB_LOGGING
 
+## Testing
+
+__npm start__ to run the app
+
+__npm run dev__ to run in develop mode
+
+__npm run test__ to run test
+
 
 
 ## Request examples
