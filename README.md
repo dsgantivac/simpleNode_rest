@@ -21,7 +21,8 @@ modify the .env file, to change the environment variables.
 - SEQUELIZE_LOGGING: show access queries in console (if it's not "true", the application assumes that it is false)
 
 
-## Testing
+## Running
+__npm install__ install node modules.
 
 __npm start__ to run the app
 
