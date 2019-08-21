@@ -11,7 +11,7 @@ module.exports = {
         }).then(response => {
             res.send(response)
         }).catch(err => {
-            res.send("user not exist")
+            res.send({message: "user not exist"})
         })
     },
     getUsers: (req,res) => {
@@ -24,7 +24,7 @@ module.exports = {
             res.send({data: elements})
         }).catch(err => {
             //console.log(err);
-            res.send("error searching")
+            res.send({message: "error searching"})
             
         })
     },
@@ -42,7 +42,7 @@ module.exports = {
                 response.save()
                 res.send( response.dataValues)
             }).catch(err => {
-                res.send("error creating user: "+err.errors[0].message)
+                res.send({message: "error creating user: "+err.errors[0].message})
             })
         })
 
@@ -56,9 +56,9 @@ module.exports = {
             user.name = newName;
             return user.save();
         }).then(response => {
-            res.send("user updated")
+            res.send({message: "user updated"})
         }).catch(err => {
-            req.send("error")
+            req.send({message: "error"})
         })
 
     },
@@ -72,9 +72,9 @@ module.exports = {
         }).then(response => {
             return response.destroy()
         }).then(response => {
-            res.send("user delete success")
+            res.send({message: "user delete success"})
         }).catch(err => {
-            res.send("error deleting user")
+            res.send({message: "error deleting user"})
         })
 
     }

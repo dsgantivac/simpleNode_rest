@@ -13,13 +13,13 @@ module.exports = {
                         req.session.isLoggedIn = true;
                         req.session.user = user
                         req.session.save(); 
-                        res.send("password match")
+                        res.send({message: "password match"})
                     }else{
-                        res.send("password dismatch")
+                        res.send({message: "password dismatch"})
                     }
                 })
             }else{
-                res.send("user not find")
+                res.send({message: "user not find"})
             }            
         })
     }

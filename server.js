@@ -81,3 +81,5 @@ sequelize.sync({force: SEQUELIZE_FORCE, logging:SEQUELIZE_LOGGING}).then(result 
 }).catch( err => {
     console.log(err);
 })
+
+module.exports = app
