@@ -16,9 +16,9 @@ modify the .env file, to change the environment variables.
 - DB_USER: database user
 - DB_PASSWORD: database password
 - DB_HOST: database host
-- DB_LOGGING: show queries on console
-- SEQUELIZE_FORCE: drop and create all tables in the database
-- SEQUELIZE_LOGGING: show access queries in console
+- DB_LOGGING: show queries on console (if it's not "true", the application assumes that it is false)
+- SEQUELIZE_FORCE: drop and create all tables in the database (if it's not "true", the application assumes that it is false)
+- SEQUELIZE_LOGGING: show access queries in console (if it's not "true", the application assumes that it is false)
 
 
 ## Testing

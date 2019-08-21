@@ -17,7 +17,7 @@ result = dotenv.config();
 
 // deploy tools
 const port = process.env.PORT ?  process.env.PORT: 3000; 
-const SEQUELIZE_FORCE = process.env.SEQUELIZE_FORCE == "true" ? process.env.SEQUELIZE_FORCE: false; 
+const SEQUELIZE_FORCE = process.env.SEQUELIZE_FORCE == "true" ? true: false; 
 const SEQUELIZE_LOGGING = process.env.SEQUELIZE_LOGGING == "true"  ? true: false; 
 
 const helmet = require("helmet")
