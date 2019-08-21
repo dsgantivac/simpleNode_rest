@@ -42,7 +42,13 @@ module.exports = {
                 response.save()
                 res.send( response.dataValues)
             }).catch(err => {
-                res.send({message: "error creating user: "+err.errors[0].message})
+                if(err.errors) {
+                    res.send({message: "error creating user: "+err.errors[0].message})
+                }else{
+                    console.log(err);
+                    
+                    res.send("internal error")
+                }
             })
         })
 

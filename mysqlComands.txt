@@ -4,4 +4,4 @@ CREATE USER 'despliegue'@'localhost' IDENTIFIED BY '1234';
 
 GRANT ALL PRIVILEGES ON despliegue.* TO 'despliegue'@'localhost';
 
-ALTER USER 'despliegue'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234'
+ALTER USER 'despliegue'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';

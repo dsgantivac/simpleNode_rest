@@ -73,7 +73,7 @@ app.use((req,res,next)=>{
 })
 
 app.listen(port,() => {
-    console.log("app start on port:" +port+ " sequelize force:"+SEQUELIZE_FORCE);
+    console.log("app start on port:" +port+ " sequelize force:"+SEQUELIZE_FORCE+ " databse password: "+process.env.DB_PASSWORD);
 })
 
 sequelize.sync({force: SEQUELIZE_FORCE, logging:SEQUELIZE_LOGGING}).then(result => {
