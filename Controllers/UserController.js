@@ -1,4 +1,5 @@
 const User = require("../Models/User")
+const bcrypt = require("bcryptjs")
 
 module.exports = {
     findUser: (req,res) => {
@@ -19,10 +20,10 @@ module.exports = {
             response.forEach(element => {
                 elements.push(element.dataValues)
             });
-            console.log(response);
+            //console.log(response);
             res.send({data: elements})
         }).catch(err => {
-            console.log(err);
+            //console.log(err);
             res.send("error searching")
             
         })
@@ -30,18 +31,36 @@ module.exports = {
     createUser: (req,res) => {
         let name = req.body.name
         let email = req.body.email
+        let password = req.body.password
 
-        User.create({
-            name: name,
-            email: email
-        }).then(response => {
-            console.log(response);
-            response.save()
-            res.send( response.dataValues)
-        }).catch(err => {
-            console.log(err);
-            res.send("error creating user: "+err.errors[0].message)
+        bcrypt.hash(password,12).then(encryptPassword => {
+            User.create({
+                name: name,
+                email: email,
+                password: encryptPassword
+            }).then(response => {
+                response.save()
+                res.send( response.dataValues)
+            }).catch(err => {
+                res.send("error creating user: "+err.errors[0].message)
+            })
         })
+
+    },
+    updateUser: (req,res) => {
+        let id = req.body.id;
+        let newName = req.body.name;
+        User.findOne({where: {
+            id: id
+        }}).then(user => {
+            user.name = newName;
+            return user.save();
+        }).then(response => {
+            res.send("user updated")
+        }).catch(err => {
+            req.send("error")
+        })
+
     },
     deleteUser: (req,res) => {
         let id = req.body.id
