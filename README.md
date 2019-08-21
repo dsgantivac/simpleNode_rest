@@ -27,7 +27,7 @@ __npm start__ to run the app
 
 __npm run dev__ to run in develop mode
 
-__npm run test__ to run the test
+__npm run test__ to run the test in the app
 
 
 
