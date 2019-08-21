@@ -9,7 +9,7 @@
 
 ## Enviromant variables
 
-modify .env file, to change the environment variables.
+modify the .env file, to change the environment variables.
 
 - PORT
 - DB_NAME
