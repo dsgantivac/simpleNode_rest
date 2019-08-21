@@ -7,7 +7,7 @@
 - __npm v6.9.0__
 - __mysql v8.0.17__
 
-## Enviromant variables
+## Enviroment variables
 
 modify the .env file, to change the environment variables.
 
@@ -57,3 +57,18 @@ http://localhost:3000/users with delete method
     "id": 1
 }
 ```
+
+## login
+
+http://localhost:3000/login with post method
+
+```javascript
+{
+	"email": "prueba@gmail.com",
+	"password": "123456"
+}
+```
+
+
+
+
